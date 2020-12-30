@@ -38,3 +38,9 @@ Route::get('/nome/{nome}/{idade}/{sobrenome?}', 'Main@nome');
 Route::get('/home', 'Main@home')->name('home');
 Route::get('/servicos', 'Main@servicos')->name('servicos');
 Route::get('/contato', 'Main@contato')->name('contato');
+
+//LARAVEL #011 INTRODUÇÃO AOS CONTROLLERS
+Route::get('clientes', 'Clientes@index');
+Route::get('email', 'Clientes@mostraEmail');
+
+Route::get('produtos', 'Stock\Produtos@index');
