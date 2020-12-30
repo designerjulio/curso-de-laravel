@@ -17,13 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/teste', 'Main@index');
-Route::get('/user', 'Main@user');
+Route::get('/user/{nome}', function($nome){
+    //echo 'Nome: ' . $nome;
+    echo "Nome: $nome";
+});
 
-Route::view('/pagina', 'pagina');
+Route::get('/user/{nome}/{sobrenome}', function($nome, $sobrenome){
+    //echo 'Nome: ' . $nome;
+    echo "Nome: $nome $sobrenome";
+});
 
-Route::view('/pagina2', 'pagina2', ['nome' => 'Julio Cezar']);
-
-Route::view('/pagina3', 'pagina3', ['nome' => 'Julio Cezar']);
-
-Route::get('/pagina4', 'Main@mostrarNome');
+Route::get('user/{nome}/{sobrenome}', 'Main@user');
