@@ -12,4 +12,7 @@ class Main extends Controller
     public function user(){
         echo "Estou no user!";
     }
+    public function mostrarNome(){
+        return view('pagina3', ['nome'=> 'Armando Volks']);
+    }
 }
