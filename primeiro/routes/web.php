@@ -33,3 +33,8 @@ Route::get('user/{nome}/{sobrenome}', 'Main@user');
 //});
 
 Route::get('/nome/{nome}/{idade}/{sobrenome?}', 'Main@nome');
+
+//LARAVEL #010 ROUTES COM NOME
+Route::get('/home', 'Main@home')->name('home');
+Route::get('/servicos', 'Main@servicos')->name('servicos');
+Route::get('/contato', 'Main@contato')->name('contato');
