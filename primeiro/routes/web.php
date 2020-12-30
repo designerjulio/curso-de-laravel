@@ -17,6 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/teste', function () {
-    echo "Olá Mundo!";
-});
+Route::get('/teste', 'Main@index');
+Route::get('/user', 'Main@user');
