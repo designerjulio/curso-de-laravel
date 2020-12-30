@@ -19,4 +19,11 @@ class Main extends Controller
             'sobrenome' => $sobrenome
         ]);
     }
+    public function nome($nome, $idade, $sobrenome = ''){
+        return view('nome', [
+            'nome'=> $nome,
+            'sobrenome'=> $sobrenome,
+            'idade'=> $idade
+        ]);
+    }
 }

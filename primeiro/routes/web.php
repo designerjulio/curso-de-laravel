@@ -23,8 +23,13 @@ Route::get('/user/{nome}', function($nome){
 });
 
 Route::get('/user/{nome}/{sobrenome}', function($nome, $sobrenome){
-    //echo 'Nome: ' . $nome;
     echo "Nome: $nome $sobrenome";
 });
 
 Route::get('user/{nome}/{sobrenome}', 'Main@user');
+
+//Route::get('/nome/{nome}/{idade}/{sobrenome?}', function($nome, $idade, $sobrenome = ''){
+//    echo "Nome: $nome $sobrenome | Idade: $idade";
+//});
+
+Route::get('/nome/{nome}/{idade}/{sobrenome?}', 'Main@nome');
