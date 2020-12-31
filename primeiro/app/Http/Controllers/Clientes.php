@@ -23,4 +23,36 @@ class Clientes extends Controller
     private function email(){
         echo 'Email do cliente';
     }
+
+    //LARAVEL #012 CONTROLLERS COM UMA FUNÇÃO E PARÂMETROS
+    private $clientes = [
+        [
+            'nome' => 'Julio',
+            'email' => 'julio@email.com'
+        ],
+        [
+            'nome' => 'Monica',
+            'email' => 'monicao@email.com'
+        ],
+        [
+            'nome' => 'Tosoni',
+            'email' => 'tosoni@email.com'
+        ],
+        [
+            'nome' => 'Cezar',
+            'email' => 'cezar@email.com'
+        ]
+    ];
+
+    public function cliente($index){
+        echo $this->clienteDetail($index);
+    }
+
+    private function clienteDetail($index){
+        if($index >= 0 && $index < count($this->clientes)){
+            return "Nome: {$this->clientes[$index]['nome']} | Email: {$this->clientes[$index]['email']}";
+        }else{
+            return 'Não existe o cliente escolhido.';
+        }
+    }
 }

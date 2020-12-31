@@ -44,3 +44,8 @@ Route::get('clientes', 'Clientes@index');
 Route::get('email', 'Clientes@mostraEmail');
 
 Route::get('produtos', 'Stock\Produtos@index');
+
+//LARAVEL #012 CONTROLLERS COM UMA FUNÇÃO E PARÂMETROS
+Route::get('dados/{a}', 'Stats');
+
+Route::get('cliente/{index}', 'Clientes@cliente');
