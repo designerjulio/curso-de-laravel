@@ -55,3 +55,11 @@ Route::get('dados/{a}', 'Stats');
 Route::get('cliente/{dado}/{index?}', 'Clientes@cliente');
 
 Route::resource('produto', 'Produtos');
+
+//LARAVEL #014 INTRODUÇÃO ÀS VIEWS
+Route::view('ver', 'pagina');
+
+Route::view('ver2', 'clientes\cliente');
+Route::view('ver3', 'clientes.cliente');
+
+Route::get('ver4', 'Clientes@pagina');

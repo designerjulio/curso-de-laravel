@@ -63,4 +63,13 @@ class Clientes extends Controller
     public function cliente($dado, $index = 0){
         echo "Nome: {$this->clientes[$index][$dado]}";
     }
+
+    //LARAVEL #014 INTRODUÇÃO ÀS VIEWS
+    public function pagina(){
+        //return view('clientes.cliente');
+
+        echo 'inicio';
+        echo view('clientes.cliente');
+        echo 'Fim';
+    }
 }
