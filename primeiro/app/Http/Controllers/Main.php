@@ -73,7 +73,8 @@ class Main extends Controller
         $data = [
             'titulo' => 'Página de teste',
             'texto' => 'Este é o texto da página',
-            'valor' => 100,
+            'valor' => 1000,
+            'nome' => '',
             'nomes' => [
                 'Julio', 'Renato', 'Armando', 'Ana', 'Gabi'
             ]

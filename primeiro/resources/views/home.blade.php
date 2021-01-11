@@ -1,4 +1,4 @@
-{{-- LARAVEL #017 BLADE COMENTÁRIOS, APRESENTAÇÃO DE DADOS E EXECUÇÃO DE PHP --}}
+{{-- LARAVEL #018 BLADE IF ELSEIF, UNLESS, ISSET, EMPTY E SWITCH --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +7,38 @@
     <title>{{$titulo}}</title>
 </head>
 <body>
-    <p>{{$texto}}</p>
-    <p>{{rand(1,100)}}</p>
-    <a href="{{route('minha_route')}}">Link</a>
+    @if($valor == 100)
+        <p>igual a 100</p>
+    @elseif($valor < 100)
+        <p>menor que 100</p>
+    @else
+        <p>maior que 100</p>
+    @endif
 
-    @php
-        $nome = "Julio";
-        echo "O meu nome é $nome";
-    @endphp
+    @unless($valor == 100)
+        <p>teste</p>
+    @endunless
+
+    @isset($valor)
+        <p>Sim, existe</p>
+    @endisset
+
+    @empty($nome)
+        <p>Está vazia</p>
+    @endempty
+
+    @switch($valor)
+    @case(100)
+        Igual a 100
+        @break
+
+    @case(10)
+        Igual a 10
+        @break
+
+    @default
+        Outro valor
+@endswitch
+
 </body>
 </html>
