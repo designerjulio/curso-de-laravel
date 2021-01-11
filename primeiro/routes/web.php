@@ -66,3 +66,6 @@ Route::get('ver4', 'Clientes@pagina');
 
 //LARAVEL #015 PASSAR DADOS DOS CONTROLLERS PARA AS VIEWS
 Route::get('/', 'Main@home');
+
+//LARAVEL #017 BLADE COMENTÁRIOS, APRESENTAÇÃO DE DADOS E EXECUÇÃO DE PHP
+Route::get('/endereco_teste', 'Main@teste')->name('minha_route');

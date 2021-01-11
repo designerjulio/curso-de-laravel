@@ -69,6 +69,18 @@ class Main extends Controller
         ];
         return view('home', $data);*/
 
-        return view('home');
+        //LARAVEL #017 BLADE COMENTÁRIOS, APRESENTAÇÃO DE DADOS E EXECUÇÃO DE PHP
+        $data = [
+            'titulo' => 'Página de teste',
+            'texto' => 'Este é o texto da página',
+            'valor' => 100,
+            'nomes' => [
+                'Julio', 'Renato', 'Armando', 'Ana', 'Gabi'
+            ]
+        ];
+        return view('home', $data);
+    }
+    public function teste(){
+        echo 'Eu estou aqui';
     }
 }
