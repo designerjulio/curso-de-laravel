@@ -44,7 +44,7 @@ class Clientes extends Controller
         ]
     ];
 
-    public function cliente($index){
+    /*public function cliente($index){
         echo $this->clienteDetail($index);
     }
 
@@ -54,5 +54,13 @@ class Clientes extends Controller
         }else{
             return 'Não existe o cliente escolhido.';
         }
+    }*/
+
+    //LARAVEL #013 CONTROLLERS COM PARÂMETROS OPCIONAIS E RESOURCE CONTROLLERS
+    /*public function cliente($index = 0){
+        echo "Nome: {$this->clientes[$index]['nome']}";
+    }*/
+    public function cliente($dado, $index = 0){
+        echo "Nome: {$this->clientes[$index][$dado]}";
     }
 }

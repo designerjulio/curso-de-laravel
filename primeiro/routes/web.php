@@ -48,4 +48,10 @@ Route::get('produtos', 'Stock\Produtos@index');
 //LARAVEL #012 CONTROLLERS COM UMA FUNÇÃO E PARÂMETROS
 Route::get('dados/{a}', 'Stats');
 
-Route::get('cliente/{index}', 'Clientes@cliente');
+//Route::get('cliente/{index}', 'Clientes@cliente');
+
+//LARAVEL #013 CONTROLLERS COM PARÂMETROS OPCIONAIS E RESOURCE CONTROLLERS
+//Route::get('cliente/{index?}', 'Clientes@cliente');
+Route::get('cliente/{dado}/{index?}', 'Clientes@cliente');
+
+Route::resource('produto', 'Produtos');
