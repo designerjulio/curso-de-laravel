@@ -32,7 +32,7 @@ class Main extends Controller
         Comando para ver a lista de rotas com artisan
             php artisan route:list
     */
-    public function home(){
+    /*public function home(){
         echo '<h3>HOME</h3>';
         echo '<hr>';
         echo '<a href="'.route('home').'">Home</a><br>';
@@ -52,5 +52,21 @@ class Main extends Controller
         echo '<a href="'.route('home').'">Home</a><br>';
         echo '<a href="'.route('servicos').'">Serviços</a><br>';
         echo '<a href="'.route('contato').'">Contato</a><br>';
+    }*/
+
+    //LARAVEL #015 PASSAR DADOS DOS CONTROLLERS PARA AS VIEWS
+    public function home(){
+        //return view('home', ['nome' => 'Julio', 'sobrenome' => 'Cezar']);
+
+        $data = [
+            'nome' => 'Julio',
+            'sobrenome' => 'Cezar',
+            'idade' => 44,
+            'telefones' => [
+                '21991178599',
+                '24981778599'
+            ]
+        ];
+        return view('home', $data);
     }
 }

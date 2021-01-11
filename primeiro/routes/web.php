@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Route::get('/user/{nome}', function($nome){
     //echo 'Nome: ' . $nome;
@@ -63,3 +63,6 @@ Route::view('ver2', 'clientes\cliente');
 Route::view('ver3', 'clientes.cliente');
 
 Route::get('ver4', 'Clientes@pagina');
+
+//LARAVEL #015 PASSAR DADOS DOS CONTROLLERS PARA AS VIEWS
+Route::get('/', 'Main@home');
