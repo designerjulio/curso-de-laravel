@@ -58,7 +58,7 @@ class Main extends Controller
     public function home(){
         //return view('home', ['nome' => 'Julio', 'sobrenome' => 'Cezar']);
 
-        $data = [
+        /*$data = [
             'nome' => 'Julio',
             'sobrenome' => 'Cezar',
             'idade' => 44,
@@ -67,6 +67,8 @@ class Main extends Controller
                 '24981778599'
             ]
         ];
-        return view('home', $data);
+        return view('home', $data);*/
+
+        return view('home');
     }
 }
